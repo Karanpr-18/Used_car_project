@@ -1,0 +1,695 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    justify-content: space-between;
+}
+
+body{
+    margin: 0;
+    height: auto;
+    background-color: white;
+    color: black;
+}
+
+.logo{
+    width: 350px;
+    height: 94px;
+}
+
+.logo img{
+    width: 300px;
+    height: auto;
+}
+
+
+.logo-icon{
+    margin-right: -1px;
+    margin-left: 10vw;
+    padding-top: 15px;
+}
+
+.nav{
+    margin-right: 10%;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    padding-bottom: 20%;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Aligns items vertically */
+}
+
+.nav a {
+    text-decoration: none;
+    background: white;
+    color: black;
+    padding: 8px 17px;
+    border-radius: 20px;
+    margin-right: 8px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-family: 'quicksand', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.15s;
+}
+
+.nav a:hover{
+    background-color: rgb(210, 76, 76);
+}
+
+.menu-icon {
+    margin-right: 10vw;
+    margin-top: 25px;
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: rgb(46, 163, 242);
+}
+
+.nav {
+    position: relative;
+}
+
+.forex-button{
+    margin: 0;
+    padding-bottom: 20px;
+    transition: 0.15s;
+}
+
+.forex-button button{
+    text-decoration: none;
+    background: #1C588A;
+    color: white;
+    padding: 8px 17px;
+    border-radius: 20px;
+    margin-right: 8px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-family: 'Glacial Indifference';
+    font-weight: 600;
+    transition: background-color 0.15s;
+    border: none;
+}
+
+.forex-button{
+    position: absolute;
+    top: 7%;
+    right: 10%;
+}
+
+.dropdown-elements-1 a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+
+.dropdown{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 94px; /* Adjust based on header height */
+    left: 50%;
+    border-top: solid rgb(46, 163, 242);
+    width: 80vw;
+    transform: translateX(-50%);
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+}
+
+.dropdown-2 a, .dropdown-3 a, .dropdown-4 a, .dropdown-5 a, .dropdown-6 a, .submenu-1 a, .submenu-2 a, .submenu-3 a, .submenu-2-a a, .submenu-2-b a, .submenu-2-c a, .submenu-3-a a, .submenu-3-b a, .submenu-3-c a{
+    display: block;
+    font-family: 'Montserrat', Helvetica, Arial, Lucida;
+    font-size: 14px;
+    padding: 20px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-1-i a {
+    display: block;
+    font-family: 'Montserrat', Helvetica, Arial, Lucida;
+    font-size: 14px;
+    padding: 20px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    background: rgb(255, 255, 255);
+}
+
+.indented-sub{
+    padding-left: 35px;
+}
+
+.indented-sub-i{
+    padding-left: 30px;
+}
+
+.indented-sub-ii{
+    padding-left: 30px;
+}
+
+.dropdown-elements a {
+    display: block;
+    font-family: 'Montserrat', Helvetica, Arial, Lucida;
+    font-size: 14px;
+    padding: 20px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+    background: #f7f7f7;
+}
+
+.dropdown a:hover {
+    background: #f4f4f4;
+}
+
+.dropdown-2 a, .dropdown-3 a, .dropdown-4 a, .dropdown-5 a, .dropdown-6 a, .submenu-1 a, .submenu-2 a, .submenu-3 a, .submenu-2-a a, .submenu-2-b a, .submenu-2-c a, .submenu-3-a a, .submenu-3-b a, .submenu-3-c a{
+    border: none;
+}
+
+
+.dropdown-2, .dropdown-3, .dropdown-4, .dropdown-5, .dropdown-6, .submenu-1, .submenu-2, .submenu-3, .submenu-2-a, .submenu-2-b, .submenu-2-c, .submenu-3-a, .submenu-3-b, .submenu-3-c {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    z-index: 1000;
+    width: 250px; /* Adjust width */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-top: solid #1C588A;
+    border-radius: 0;
+    padding: 5px 0;
+    margin-top: 10px;
+    transition: 0.1s;
+}
+
+.dropdown-2 a, .dropdown-3 a, .dropdown-4 a, .dropdown-5 a, .dropdown-6 a, .submenu-1 a, .submenu-2 a, .submenu-3 a, .submenu-2-a a, .submenu-2-b a, .submenu-2-c a, .submenu-3-a a, .submenu-3-b a, .submenu-3-c a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: whitesmoke;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 0;
+    line-height: 27px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Position dropdown below "Elliott Waves" */
+.nav a:nth-child(2) {
+    position: relative;
+}
+
+.elliott-waves-button:hover{
+    cursor: pointer;
+}
+
+.equities-button:hover{
+    cursor: pointer;
+}
+
+.elliott-waves-button:hover .dropdown-2,
+.dropdown-2:hover {
+    display: block;
+}
+
+.nav a:nth-child(3) {
+    position: relative;
+}
+
+.equities-button:hover .dropdown-3,
+.dropdown-3:hover {
+    display: block;
+}
+
+
+.commodities-button:hover .dropdown-4,
+.dropdown-4:hover {
+    display: block;
+}
+
+.nav a:nth-child(4) {
+    position: relative;
+}
+
+
+.forex-button:hover .dropdown-5,
+.dropdown-5:hover {
+    display: block;
+}
+
+.nav a:nth-child(5) {
+    position: relative;
+}
+
+.more-button:hover .dropdown-6,
+.dropdown-6:hover {
+    display: block;
+}
+
+.nav a:nth-child(6) {
+    position: relative;
+}
+
+.header-separator{
+    width: 100%;   
+    margin: 0;
+    border: none;  
+    height: 2px;   
+    background-color: whitesmoke; 
+}
+
+.large-container{
+    width: 70%;
+    text-align: left;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin: 0;
+}
+
+.title{
+    font-size: 60px;
+    font-family: 'Glacial Indifference';
+    font-weight: 500;
+    padding: 0;
+    margin-top: 30px;
+    color: black;
+}
+
+.title p{
+    margin-top: 0; 
+    margin-bottom: 30px;
+}
+
+.subheading{
+    font-size: 36px;
+    font-family: 'Glacial Indifference';
+    font-weight: 500;
+}
+
+.subheading p{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.para{
+    font-size: 19px;
+    font-family: 'Libre Caslon Text', Georgia;
+}
+
+.links-blog{
+    font-size: 25px;
+    font-family: 'Glacial Indifference';
+    margin-bottom: 35px;
+}
+
+.links-blog a{
+    color: black;
+}
+
+.blog-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-blog img {
+    float: left;
+    height: 111px;
+    width: 210px;
+    margin-right: 20px;
+}
+
+/* .text {
+    text-align: justify;
+} */
+
+.blog-title{
+    font-family: 'Montserrat', Helvetica, Arial, Lucida;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.blog-title a{
+    text-decoration: none;
+    color: black;
+}
+
+.date{
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-family: 'Libre Caslon Text', Georgia;
+    font-size: 19px;
+    color: black;
+}
+
+.date a{
+    text-decoration: none;
+    color: #666666;
+}
+
+.blog-desc{
+    margin-top: 8px;
+    font-family: 'Libre Caslon Text', Georgia;
+    font-size: 18px;
+    color: black;    
+    margin-bottom: 60px;
+    line-height: 27px;
+}
+
+@media (max-width: 890px){
+}
+
+@media (max-width: 982px){
+    .header{
+        height: 94px !important;
+    }
+    .logo-icon{
+        width: 169.5px;
+        height: 53.2px;
+    }
+    .nav{
+        display:none;
+    }
+
+    .nav-foot{
+        display: none;
+    }
+
+    /* .menu-icon{
+        display: block;
+    }     */
+
+    .dropdown.show {
+        opacity: 1;
+        max-height: 3715px; /* Adjust as needed */
+    }
+}
+
+@media (max-width: 1050px){
+    .nav{
+        flex-basis: 100%;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .header{
+        height: 135px;
+    }
+    .logo{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 760px){
+    body{
+        width: 100% !important;
+        margin: 0 !important;
+        overflow-x: hidden;
+    }
+    html{
+        width: 100% !important;
+        margin: 0 !important;
+        overflow-x: hidden;
+    }
+    .large-container{
+        width: 95%;
+        margin: auto;
+    }
+    .blog-title{
+        font-size: 16px;
+    }
+        
+    .date,     
+    .blog-desc{
+        font-size: 14px;
+    }
+    .title{
+        font-size:36px;
+    }
+    .subheading{
+        font-size: 24px;
+    }
+    .links-blog{
+        font-size: 19px;
+    }
+    .logo img{
+        width: 150px;
+        height: auto;
+    }
+    .forex-button button{
+        padding: 5px 13px;
+        border-radius: 20px;
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    .forex-button{
+        top: 4%;
+        right: 5%;
+    }
+}
+
+.separator{
+    width: 100%;   
+    background-color: rgb(154, 154, 154);
+    margin: auto;
+    margin-top: 100px;
+    border: none;  
+    height: 2px;   
+}
+
+input[type="text"] {
+    font-family: 'Montserrat', Helvetica, Arial, Lucida !important;
+    font-size: 14px !important;
+    color: rgb(102, 102, 102) !important;
+    padding-left: 10px;
+}
+
+.search button{
+    width: 68px;
+    height: 43px;
+    border: none;
+    font-family: 'Montserrat', Helvetica, Arial, Lucida;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    background-color: rgb(221, 221, 221);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.search button:hover{
+    cursor: pointer;
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+form { /* Target the form */
+    padding: 0 !important;
+    width: 85vw;  /* Make sure the form itself is 85% of the viewport width */
+    display: flex; /* Allow elements inside to stretch */
+}
+
+
+.search-bar input{
+    flex: 1;
+    height: 40px;
+    border: solid rgb(221, 221, 221) 1px;
+}
+
+.dropdown-elements-1-a:hover .submenu-1,
+.submenu-1:hover {
+    display: inline-block;
+}
+.dropdown-elements-1-a a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.submenu-1 {
+    position: absolute;
+    left: 100%; /* Moves it to the right of the parent */
+    top: 75%; /* Aligns it to the top of the parent */
+    display: none;
+}
+
+.dropdown-elements-2-a a:hover, .dropdown-elements-2-a a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.submenu-2 {
+    position: absolute;
+    right: 100%; /* Moves it to the left of the parent */
+    top: -22%; /* Aligns it to the top of the parent */
+    display: none;
+}
+
+.dropdown-elements-2-a:hover .submenu-2,
+.submenu-2:hover {
+    display: inline-block;
+}
+
+.dropdown-elements-2-b a:hover, .dropdown-elements-2-b a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.submenu-3 {
+    position: absolute;
+    right: 100%; /* Moves it to the left of the parent */
+    top: 23%; /* Aligns it to the top of the parent */
+    display: none;
+}
+
+.dropdown-elements-2-b:hover .submenu-3,
+.submenu-3:hover {
+    display: inline-block;
+}
+
+.sig-sub-1 a:hover, .sig-sub-1 a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.submenu-2-a {
+    position: absolute;
+    right: 100%; /* Moves it to the left of the parent */
+    top: -9.2%; /* Aligns it to the top of the parent */
+    display: none;
+}
+
+.sig-sub-1:hover .submenu-2-a,
+.submenu-2-a:hover {
+    display: inline-block;
+}
+
+.sig-sub-2 a:hover, .sig-sub-2 a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.submenu-2-b {
+    position: absolute;
+    right: 100%; /* Moves it to the left of the parent */
+    top: 50%; /* Aligns it to the top of the parent */
+    display: none;
+}
+
+.sig-sub-2:hover .submenu-2-b,
+.submenu-2-b:hover {
+    display: inline-block;
+}
+
+
+.sig-sub-3 a:hover, .sig-sub-3 a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.submenu-2-c {
+    position: absolute;
+    right: 100%; /* Moves it to the left of the parent */
+    top: 70%; /* Aligns it to the top of the parent */
+    display: none;
+}
+
+.sig-sub-3:hover .submenu-2-c,
+.submenu-2-c:hover {
+    display: inline-block;
+}
+
+
+.sig-sub-1-a a:hover, .sig-sub-1-a a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.submenu-3-a {
+    position: absolute;
+    right: 100%; /* Moves it to the left of the parent */
+    top: -6.8%; /* Aligns it to the top of the parent */
+    display: none;
+}
+
+.sig-sub-1-a:hover .submenu-3-a,
+.submenu-3-a:hover {
+    display: block;
+}
+
+.sig-sub-1-b a:hover, .sig-sub-1-b a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.submenu-3-b {
+    position: absolute;
+    right: 100%; /* Moves it to the left of the parent */
+    top: 9%; /* Aligns it to the top of the parent */
+    display: none;
+}
+
+.sig-sub-1-b:hover .submenu-3-b,
+.submenu-3-b:hover {
+    display: block;
+}
+
+
+.sig-sub-1-c a:hover, .sig-sub-1-c a:hover{
+    background-color: rgb(249, 249, 249);
+}
+
+.submenu-3-c {
+    position: absolute;
+    right: 100%; /* Moves it to the left of the parent */
+    top: 63%; /* Aligns it to the top of the parent */
+    display: none;
+}
+
+.sig-sub-1-c:hover .submenu-3-c,
+.submenu-3-c:hover {
+    display: block;
+}
+
+
+/*MileageMatters specific code (newly added)*/
+
+.next-article{
+    font-size: 25px;
+}
+
+.next-article a{
+    color:rgb(46, 163, 242);
+    text-decoration: none;
+}
