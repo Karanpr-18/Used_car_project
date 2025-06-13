@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page 2 - Analysis Based on Pricing | MileageMatters</title>
+    <link href="blog.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2" rel="stylesheet" />
+    <style>
+      /* Add your existing styles here */
+      .select-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      select {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        border: 2px solid #d1d5db;
+        border-radius: 12px;
+        background: #fff;
+        color: #1f2937;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+      }
+      select:focus {
+        border-color: #6366f1;
+      }
+      .material-icons.dropdown-icon {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #9ca3af;
+        user-select: none;
+        font-size: 24px;
+      }
+      .message {
+        text-align: center;
+        min-height: 24px;
+        font-size: 18px;
+        user-select: none;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .error {
+        color: #ef4444;
+        font-weight: 600;
+        background-color: #fef2f2;
+      }
+      .success {
+        color: #10b981;
+        font-weight: 600;
+        background-color: #f0fdf4;
+      }
+      #submitBtn {
+        padding: 12px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        background-color: #6366f1;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+      }
+      #submitBtn:hover {
+        background-color: #4f46e5;
+      }
+    </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img class="logo-icon" src="images/logo-1.png" />
+      </a>
+    </div>
+    <div class="forex-button" id="forexButton" onclick="toggleMenu()">
+      <button>
+        Explore Analyses
+        <svg width="8" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1 1L6 6L11 1"
+            stroke="white"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+      <div class="dropdown-5" id="dropdownMenu">
+        <div class="dropdown-elements-1"><a href="index.html">Home Page - Analysis on Indian Car Market</a></div>
+        <div class="dropdown-elements-1"><a href="page-2.html">Page 2 - Analysis Based on Pricing</a></div>
+        <div class="dropdown-elements-1"><a href="page-3.html">Page 3 - Analysis Based on Brands and Models</a></div>
+        <div class="dropdown-elements-1"><a href="page-4.html">Page 4 - Analysis Based on Car Age</a></div>
+        <div class="dropdown-elements-1"><a href="page-5.html">Page 5 - Predict Your Car Price</a></div>
+      </div>
+    </div>
+  </div>
+  <hr class="header-separator" />
+
+  <div class="large-container">
+    <div class="container">
+      <div class="title">
+        <p>Analysis Based on Pricing</p>
+      </div>
+      <div class="links-blog">
+        <p></p>
+      </div>
+
+      <!-- Dropdowns for Brand and Model Selection -->
+      <div class="select-wrapper">
+        <label for="brandSelect">Brand</label>
+        <select id="brandSelect" name="brand" aria-required="true" aria-invalid="false">
+          <option value="" disabled selected>Select a brand</option>
+          <!-- Options will be populated from JS -->
+        </select>
+        <span class="material-icons dropdown-icon" aria-hidden="true"></span>
+      </div>
+
+      <div class="select-wrapper">
+        <label for="modelSelect">Model</label>
+        <select id="modelSelect" name="model" disabled aria-required="true" aria-invalid="false">
+          <option value="" disabled selected>Select a model</option>
+        </select>
+        <span class="material-icons dropdown-icon" aria-hidden="true"></span>
+      </div>
+
+      <div class="select-wrapper">
+        <label for="ageSelect">Car Age</label>
+        <select id="ageSelect" name="age" aria-required="true" aria-invalid="false">
+          <option value="" disabled selected>Select car age</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+        <span class="material-icons dropdown-icon" aria-hidden="true"></span>
+      </div>
+
+      <div class="select-wrapper">
+        <label for="distanceSelect">Distance Driven</label>
+        <select id="distanceSelect" name="distance" aria-required="true" aria-invalid="false">
+          <option value="" disabled selected>Select distance</option>
+          <option value="0">0</option>
+          <option value="5000">5000</option>
+          <option value="10000">10000</option>
+          <option value="15000">15000</option>
+          <option value="20000">20000</option>
+          <option value="25000">25000</option>
+          <option value="30000">30000</option>
+          <option value="35000">35000</option>
+          <option value="40000">40000</option>
+          <option value="45000">45000</option>
+          <option value="50000">50000</option>
+        </select>
+        <span class="material-icons dropdown-icon" aria-hidden="true"></span>
+      </div>
+
+      <div class="select-wrapper">
+        <label for="gearSelect">Gear Type</label>
+        <select id="gearSelect" name="gear" aria-required="true" aria-invalid="false">
+          <option value="" disabled selected>Select gear type</option>
+          <option value="Manual">Manual</option>
+          <option value="Automatic">Automatic</option>
+        </select>
+        <span class="material-icons dropdown-icon" aria-hidden="true"></span>
+      </div>
+
+      <div class="select-wrapper">
+        <label for="fuelSelect">Fuel Type</label>
+        <select id="fuelSelect" name="fuel" aria-required="true" aria-invalid="false">
+          <option value="" disabled selected>Select fuel type</option>
+          <option value="Petrol">Petrol</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Hybrid/CNG">Hybrid/CNG</option>
+          <option value="Hybrid">Hybrid</option>
+        </select>
+        <span class="material-icons dropdown-icon" aria-hidden="true"></span>
+      </div>
+
+      <button type="button" id="submitBtn">Predict Price</button>
+      <div id="errorMessage" class="message error" role="alert" aria-live="assertive"></div>
+      <div id="resultMessage" class="message success" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div
+    style="
+      margin-bottom: 0px;
+      background-color: black;
+      color: whitesmoke;
+      height: 70px;
+      margin-top: 100px;
+      border-top: solid;
+      border-top-color: whitesmoke;
+    "
+    class="header"
+  >
+    <div
+      style="
+        font-family: 'Libre Caslon Text', Georgia;
+        font-size: 16px;
+        margin-right: -1px;
+        margin-left: 10vw;
+        padding-bottom: 15px;
+      "
+      class="copyright-text"
+    >
+      <p>COPYRIGHT © 2025 MileageMatters</p>
+    </div>
+  </div>
+
+  <script>
+    // Load dataset JSON from your hosted file
+    async function loadDataset() {
+      const response = await fetch("filtered_data.json");
+      if (!response.ok) throw new Error("Failed to load dataset");
+      let data = await response.json();
+      // Filter for age ≤ 8
+      data = data.filter((car) => car.age <= 8);
+      return data;
+    }
+
+    // Build brand->models map and populate brand dropdown
+    function processBrandsModels(data) {
+      const brandModelMap = new Map();
+      data.forEach((car) => {
+        if (!brandModelMap.has(car.brand)) brandModelMap.set(car.brand, new Set());
+        brandModelMap.get(car.brand).add(car.model);
+      });
+      return brandModelMap;
+    }
+
+    // Prediction function format
+    function predictPrice(data, inputs) {
+      const ageTolerance = 2; // years
+      const distTolerance = 15000; // kms
+
+      let filtered = data.filter(
+        (car) =>
+          car.brand === inputs.brand &&
+          car.model === inputs.model &&
+          car.fuel === inputs.fuel &&
+          car.gear === inputs.gear &&
+          Math.abs(car.age - inputs.age) <= ageTolerance &&
+          Math.abs(car.distance - inputs.distance) <= distTolerance
+      );
+
+      if (filtered.length === 0) {
+        filtered = data.filter(
+          (car) =>
+            car.brand === inputs.brand &&
+            car.model === inputs.model &&
+            car.fuel === inputs.fuel &&
+            car.gear === inputs.gear &&
+            Math.abs(car.age - inputs.age) <= ageTolerance
+        );
+      }
+
+      if (filtered.length === 0) {
+        filtered = data.filter(
+          (car) => car.brand === inputs.brand && car.model === inputs.model && car.age <= 8
+        );
+      }
+
+      if (filtered.length === 0) {
+        return null;
+      }
+
+      return filtered.reduce((acc, c) => acc + c.askprice, 0) / filtered.length;
+    }
+
+    // Initialize app
+    async function init() {
+      const carData = await loadDataset();
+      const brandModelMap = processBrandsModels(carData);
+      populateBrandDropdown(brandModelMap);
+
+      // Event listeners
+      document.getElementById("brandSelect").addEventListener("change", (e) => {
+        populateModelDropdown(e.target.value, brandModelMap);
+      });
+
+      document.getElementById("submitBtn").addEventListener("click", () => {
+        const inputs = {
+          brand: document.getElementById("brandSelect").value,
+          model: document.getElementById("modelSelect").value,
+          fuel: document.getElementById("fuelSelect").value,
+          gear: document.getElementById("gearSelect").value,
+          age: Number(document.getElementById("ageSelect").value),
+          distance: Number(document.getElementById("distanceSelect").value),
+        };
+
+        const predictedPrice = predictPrice(carData, inputs);
+        const resultMessage = document.getElementById("resultMessage");
+        const errorMessage = document.getElementById("errorMessage");
+
+        if (predictedPrice === null) {
+          resultMessage.textContent = "";
+          errorMessage.textContent = "No price prediction available for the selected criteria.";
+        } else {
+          errorMessage.textContent = "";
+          resultMessage.textContent = "Estimated Price: ₹" + predictedPrice.toFixed(2);
+        }
+      });
+    }
+
+    function populateBrandDropdown(brandModelMap) {
+      const brandSelect = document.getElementById("brandSelect");
+      brandSelect.innerHTML = '<option value="" disabled selected>Select a brand</option>';
+      brandModelMap.forEach((_, brand) => {
+        const option = document.createElement("option");
+        option.value = brand;
+        option.textContent = brand;
+        brandSelect.appendChild(option);
+      });
+    }
+
+    function populateModelDropdown(brand, brandModelMap) {
+      const modelSelect = document.getElementById("modelSelect");
+      modelSelect.innerHTML = '<option value="" disabled selected>Select a model</option>';
+      if (!brand || !brandModelMap.has(brand)) {
+        modelSelect.disabled = true;
+        return;
+      }
+      brandModelMap.get(brand).forEach((model) => {
+        const option = document.createElement("option");
+        option.value = model;
+        option.textContent = model;
+        modelSelect.appendChild(option);
+      });
+      modelSelect.disabled = false;
+    }
+
+    // Run initialization after DOM content loaded
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>
+
