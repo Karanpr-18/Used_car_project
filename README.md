@@ -1,7 +1,3 @@
-Thank you! Here's the revised **professional README text** with your clarification included:
-
----
-
 # Used Car Price Analysis and Prediction
 
 This project presents a comprehensive end-to-end workflow for analyzing and predicting used car prices. It includes data preprocessing, exploratory data analysis, model evaluation, and an interactive browser-based prediction tool. The entire application is structured as a multi-page web interface and is hosted using GitHub Pages.
