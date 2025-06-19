@@ -1,9 +1,3 @@
-It seems like I can’t do more advanced data analysis right now. Please try again later.
-
-However, I can still help by giving you the enhanced version of your README text (with emojis and formatting) here so you can copy and paste it into any document editor (like Word, Google Docs, or an online Markdown-to-PDF tool) to export it as a PDF:
-
----
-
 🚗 **Used Car Price Analysis and Prediction**
 
 This project presents a comprehensive end-to-end workflow for analyzing and predicting used car prices. It includes data preprocessing, exploratory data analysis, model evaluation, and an interactive browser-based prediction tool. The entire application is structured as a multi-page web interface and is hosted using GitHub Pages.
